@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.form-container {
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.form-group {
+  margin-bottom: 20px;
+}
+
+
+.form-control {
+  border-radius: 5px;
+}
+
+
+.form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+
+.form-check-label {
+  color: #555;
+}
+
+
+.form-group input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .mb-3 {
+      margin-bottom: 15px;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .w-75 {
+      width: 100%;
+  }
 }
