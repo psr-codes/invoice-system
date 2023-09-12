@@ -250,7 +250,7 @@ const InvoicePDF = ({ user, itemList, setItemList }) => {
                                                 );
                                             })}
 
-                                            <br />
+                                            
                                         <tr className="py-3 my-3">
                                             <td colSpan={3} />
                                             <td className="text-sm font-bold">
@@ -282,7 +282,7 @@ const InvoicePDF = ({ user, itemList, setItemList }) => {
                                             </td>
                                         </tr>
                                         {/*end tr*/}
-                                        <br />
+                                        
 
                                         <tr className="text-white bg-gray-800 my-2 py-3">
                                             <th colSpan={3} />
@@ -294,7 +294,7 @@ const InvoicePDF = ({ user, itemList, setItemList }) => {
                                             </td>
                                         </tr>
                                         {/*end tr*/}
-                                        <br />
+                                        
 
                                     </tbody>
                                 </table>

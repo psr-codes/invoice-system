@@ -4,6 +4,17 @@ import React from "react";
 
 import InvoicePDF from "@/components/InvoicePDF"
 
+
+
+function useQueryParameters() {
+  const searchParams = useSearchParams();
+  const user = searchParams.get('user');
+  const itemList = searchParams.get('itemList');
+
+  return { user, itemList };
+}
+
+
 const page = () => {
     const searchParams = useSearchParams()
 
