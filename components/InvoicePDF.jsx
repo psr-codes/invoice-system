@@ -6,11 +6,19 @@ import html2canvas from "html2canvas";
 
 import JsPDF from "jspdf";
 
-const InvoicePDF = ({ user, itemList, setItemList }) => {
+import { useAppContext } from '@/context/AppContext'
+
+
+
+
+const InvoicePDF = () => {
+
+    const { user, setUser, item, setItem, itemList, setItemList } = useAppContext();
+
     const invoiceRef = useRef(null);
 
-    user = JSON.parse(user);
-    itemList = JSON.parse(itemList);
+    // user = JSON.parse(user);
+    // itemList = JSON.parse(itemList);
 
     const handleDownloadPDF = () => {
         const invoice = new JsPDF("portrait", "pt", "a4");
@@ -229,7 +237,7 @@ const InvoicePDF = ({ user, itemList, setItemList }) => {
                                                 return (
                                                     <tr
                                                         className="whitespace-nowrap"
-                                                        key={item}
+                                                        key={item.name+index}
                                                     >
                                                         <td className="px-6 py-4 text-sm text-gray-500">
                                                             {index + 1}

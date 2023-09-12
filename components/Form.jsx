@@ -2,19 +2,24 @@
 import React, { useState, useEffect } from "react";
 import ItemsList from "./ItemsList";
 
-const Form = () => {
-    const [user, setUser] = useState({
-        name: "",
-        email: "",
-        phone: "",
-    });
-    const [item, setItem] = useState({
-        itemName: "",
-        price: "",
-        quantity: "",
-    });
+import { useAppContext } from '@/context/AppContext'
 
-    const [itemList, setItemList] = useState([]);
+
+const Form = () => {
+    // const [user, setUser] = useState({
+    //     name: "",
+    //     email: "",
+    //     phone: "",
+    // });
+    // const [item, setItem] = useState({
+    //     itemName: "",
+    //     price: "",
+    //     quantity: "",
+    // });
+
+    // const [itemList, setItemList] = useState([]);
+    const { user, setUser, item, setItem, itemList, setItemList } = useAppContext();
+
 
     const handleOnUserChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
@@ -189,57 +194,7 @@ const Form = () => {
                     </div>
                 </div>
 
-                {/* <div className="relative col-span-9 lg:col-span-4 xl:col-span-5 bg-gray-100 lg:h-auto xl:h-screen px-8 py-14 xl:px-12 xl:py-20">
-                    <h3 className="font-semibold text-gray-800 text-4xl my-5">
-                        Order Summary
-                    </h3>
-
-                    <div className="flex flex-1">
-                        <h3 className="text-gray-800 font-semibold text-2xl">
-                            Items
-                        </h3>
-                        <div className="flex-auto"></div>
-                        <h5 className="text-gray-600 hover:text-gray-800 cursor-pointer text-base font-normal underline">
-                            Edit Cart
-                        </h5>
-                    </div>
-                    <div className="mt-7 flex flex-1 text-gray-800 text-lg font-normal">
-                        <h3>North wolf bag</h3>
-                        <h3 className="flex-auto text-right pr-4 md:pr-5 lg:pr-4">
-                            1x
-                        </h3>
-                        <h3>$9,000</h3>
-                    </div>
-                    <div className="mt-5 flex flex-1 text-gray-800 text-lg font-normal">
-                        <h3>LW Sneakers</h3>
-                        <h3 className="flex-auto text-right pr-7 md:pr-9 lg:pr-7">
-                            1x
-                        </h3>
-                        <h3>$740</h3>
-                    </div>
-                    <div className="mt-5 flex flex-1 text-gray-800 text-lg font-normal">
-                        <h3>Luxe card holder</h3>
-                        <h3 className="flex-auto text-right pr-7 md:pr-9 lg:pr-7">
-                            1x
-                        </h3>
-                        <h3>$500</h3>
-                    </div>
-                    <div className="-bottom-7 px-8 xl:px-12 pb-5 md:-bottom-96 bg-gray-100 md:pt-80 md:pb-10 lg:pb-10 lg:pt-0 lg:mt-0 lg:bottom-0 absolute left-0 w-full text-lg font-medium text-gray-800">
-                        <span
-                            aria-label="Total"
-                            className="float-left text-2xl text-gray-800 font-normal"
-                        >
-                            Total
-                        </span>
-                        <span
-                            aria-label="Total Price"
-                            className="float-right font-semibold text-gray-800 text-2xl"
-                        >
-                            $9,000
-                        </span>
-                        <div className="clear-both"></div>
-                    </div>
-                </div> */}
+            
             </div>
         </>
     );

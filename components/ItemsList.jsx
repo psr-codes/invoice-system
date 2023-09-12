@@ -93,13 +93,14 @@ export default function ItemsList({ itemList, setItemList, user }) {
                     </div>
                     <div>
                         <Link
-                            href={{
-                                pathname: "/invoice",
-                                query: {
-                                    itemList: JSON.stringify(itemList),
-                                    user: JSON.stringify(user),
-                                },
-                            }}
+                            // href={{
+                            //     pathname: "/invoice",
+                            //     query: {
+                            //         itemList: JSON.stringify(itemList),
+                            //         user: JSON.stringify(user),
+                            //     },
+                            // }}
+                            href="/invoice"
                             className="mx-2 my-2 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs"
                         >
                             Generate Invoice
