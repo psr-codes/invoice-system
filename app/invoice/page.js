@@ -16,11 +16,8 @@ function useQueryParameters() {
 
 
 const page = () => {
-    const searchParams = useSearchParams()
-
-    const user = searchParams.get('user')
-    const itemList = searchParams.get('itemList')
-
+    
+    const {user , itemList} = useQueryParameters();
     return <>
         this is home page
         <InvoicePDF user={user} itemList={itemList} />
