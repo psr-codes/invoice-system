@@ -6,21 +6,22 @@ import InvoicePDF from "@/components/InvoicePDF"
 
 
 
-function useQueryParameters() {
-  const searchParams = useSearchParams();
-  const user = searchParams.get('user');
-  const itemList = searchParams.get('itemList');
+// function useQueryParameters() {
+//   const searchParams = useSearchParams();
+//   const user = searchParams.get('user');
+//   const itemList = searchParams.get('itemList');
 
-  return { user, itemList };
-}
+//   return { user, itemList };
+// }
 
 
 const page = () => {
-    
-    const {user , itemList} = useQueryParameters();
+
+    // const {user , itemList} = useQueryParameters();
     return <>
         this is home page
-        <InvoicePDF user={user} itemList={itemList} />
+        {/* <InvoicePDF user={user} itemList={itemList} /> */}
+        <InvoicePDF />
     </>;
 };
 
